@@ -164,3 +164,25 @@ Jest to przykład prostej bazy danych przechowującej podstawowe informacje zwi�
      - PricePerChild
      - PriceFrom (najniższa możliwa cena za pokój)
      - PriceTo (najwyższa możliwa cena za pokój)
+   
+## Aby zyskać większą kontrolę w przypadku wprowadzania zmian lub usuwania danych dodałam wyzwalacze
+  * BookingsTriggerD <br>
+  Przy próbie usunięcia rezerwacji, zostaje wyświetlony komunikat informujący, że usuwanie wierszy w tej tablei jest niedozwolone.
+  * BookingsTriggerU <br>
+  Po aktualizacji wiersza w tabeli 'Bookings' do tabeli 'BookingChanges zostaje wstawiony rekord przed aktualizacją, aby można było później w razie potrzeby porównać rekordy i zobaczyć co zostało zmienione. 
+  * GuestsDeleteTrigger <br>
+  Po usunięciu danego gościa z bazy danych, zostaje on zapisany do tabeli 'DeletedGuests'.
+  * GuestsUpdateTrigger <br>
+  Po aktualizacji wiersza w tabeli 'Guest' zostaje wyświetlony komunikat o zmianie.
+  * NewGuestTrigger <br>
+  Po dodaniu nowego wiersza do tabeli 'Guest', wyświetlony zostaje komunikat, informujący o dodaniu nowego gościa.
+  * RoomsTrigger <br>
+  Działa na tej samej zasadzie co 'BookingsTriggerD', czyli przy próbie usunięcia w tym przypadku pokoju, zostaje wyświetlony komunikat informujący, że usuwanie wierszy w tej tablei jest niedozwolone.
+  * SpecificationTrigger <br>
+  Ten sam schemat co w przypadku 'BookingsTriggerD' oraz 'RoomsTrigger'
+  * SpecificationTriggerU <br>
+  Po aktualizacji wiersza w tabeli 'Specifications' zostaje wyświetlony komunikat o tej zmianie.
+  * PreventTableDeletion <br>
+  Przy próbie usunięcia tabeli z bazy danych, wyświetlony zostaje komunikat o błędzie mówiący, że usuwanie tabel z bazy danych nie jest dozwolone, a następnie cofa operację usuwania. Wyzwalacz ten zapobiega przypadkowemu usunięciu tabel z bazy danych.
+
+
