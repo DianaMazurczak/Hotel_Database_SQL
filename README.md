@@ -78,6 +78,27 @@ This is an example of a simple database storing basic information related to roo
      - PricePerChild
      - PriceFrom (lowest possible price per room)
      - PriceTo (highest possible price per room)
+   
+## To gain greater control when making changes or deleting data, I added triggers:
+
+  * BookingsTriggerD <br>
+  When attempting to delete a booking, a message is displayed informing that deleting rows in this table is not allowed.
+  * BookingsTriggerU <br>
+  After updating a row in the 'Bookings' table, a record is inserted into the 'BookingChanges' table before the update, so that records can be compared later if it is necessary to see what has changed.
+  * GuestsDeleteTrigger <br>
+  After deleting a guest from the database, they are saved to the 'DeletedGuests' table.
+  * GuestsUpdateTrigger <br>
+  After updating a row in the 'Guest' table, a message is displayed about the change.
+  * NewGuestTrigger <br>
+  After adding a new row to the 'Guest' table, a message is displayed informing about adding a new guest.
+  * RoomsTrigger <br>
+  Functions similarly to 'BookingsTriggerD'; when attempting to delete a room, a message is displayed indicating that deleting rows in this table is not allowed.
+  * SpecificationTrigger <br>
+  The same scheme as in the case of 'BookingsTriggerD' and 'RoomsTrigger'.
+  * SpecificationTriggerU <br>
+  After updating a row in the 'Specifications' table, a message is displayed about this change.
+  * PreventTableDeletion <br>
+  When attempting to delete a table from the database, an error message is displayed stating that deleting tables from the database is not allowed, and then the deletion operation is rolled back. This trigger prevents accidental deletion of tables from the database.
 
 ---
 
