@@ -11,6 +11,8 @@ This is an example of a simple database storing basic information related to roo
       - NumberOfAdults
       - NumberOfChildren
       - RoomId
+   
+        ![screenshot](photos/Bookings.png)
         
   * Specifications
       - BookingId
@@ -47,6 +49,10 @@ This is an example of a simple database storing basic information related to roo
     Contains the same columns as the Guests table.<br>
     Used to store deleted records in the Guests table.
 
+## Diagram
+
+![screenshot](photos/relations.png)
+
 ## The project also includes views:
 
   * BookingPanel <br>
@@ -61,6 +67,8 @@ This is an example of a simple database storing basic information related to roo
      - NumberOfAdults
      - NumberOfChildren
      - Price
+
+     ![screenshot](photos/BookingPanel.png)
        
   * GuestsNumOfBooking <br>
     <i>Shows how many bookings a particular customer has made</i>
@@ -68,6 +76,8 @@ This is an example of a simple database storing basic information related to roo
       - Surname
       - City
       - NumOfBookings
+   
+        ![screenshot](photos/GuestNumOfBookings.png)
     
   * RoomPrices <br>
     <i>Presents prices of all rooms</i>
@@ -78,6 +88,8 @@ This is an example of a simple database storing basic information related to roo
      - PricePerChild
      - PriceFrom (lowest possible price per room)
      - PriceTo (highest possible price per room)
+   
+       ![screenshot](photos/RoomsPrices.png)
    
 ## To gain greater control when making changes or deleting data, I added triggers:
 
