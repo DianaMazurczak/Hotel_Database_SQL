@@ -77,7 +77,7 @@ This is an example of a simple database storing basic information related to roo
       - City
       - NumOfBookings
    
-        ![screenshot](photos/GuestNumOfBookings.png)
+     ![screenshot](photos/GuestNumOfBookings.png)
     
   * RoomPrices <br>
     <i>Presents prices of all rooms</i>
@@ -89,7 +89,7 @@ This is an example of a simple database storing basic information related to roo
      - PriceFrom (lowest possible price per room)
      - PriceTo (highest possible price per room)
    
-       ![screenshot](photos/RoomsPrices.png)
+     ![screenshot](photos/RoomsPrices.png)
    
 ## To gain greater control when making changes or deleting data, I added triggers:
 
@@ -131,6 +131,8 @@ Jest to przykład prostej bazy danych przechowującej podstawowe informacje zwi�
       - NumberOfChildren
       - RoomId
         
+      ![screenshot](photos/Bookings.png)
+        
   * Specifications
       - BookingId
       - PersonId
@@ -166,6 +168,10 @@ Jest to przykład prostej bazy danych przechowującej podstawowe informacje zwi�
     Zawiera te same kolumny co tabela Guests.<br>
     Służy do przechowywania usuniętych rekordów w tabeli Guests.
 
+## Diagram
+
+![screenshot](photos/relations.png)
+
 ## W projekcie utworzone zostały również widoki:
 
   * BookingPanel <br>
@@ -181,12 +187,17 @@ Jest to przykład prostej bazy danych przechowującej podstawowe informacje zwi�
      - NumberOfChildren
      - Price
        
+    ![screenshot](photos/BookingPanel.png)
+       
   * GuestsNumOfBooking <br>
     <i>Pokazuje ile rezerwacji dokonał dany klient</i>
       - FirstName
       - Surname
       - City
       - NumOfBookings
+
+      ![screenshot](photos/GuestNumOfBookings.png)
+
     
   * RoomPrices <br>
     <i>Przedstawia ceny wszsystkich pokoi</i>
@@ -197,6 +208,8 @@ Jest to przykład prostej bazy danych przechowującej podstawowe informacje zwi�
      - PricePerChild
      - PriceFrom (najniższa możliwa cena za pokój)
      - PriceTo (najwyższa możliwa cena za pokój)
+       
+![screenshot](photos/RoomsPrices.png)
    
 ## Aby zyskać większą kontrolę w przypadku wprowadzania zmian lub usuwania danych dodałam wyzwalacze
   * BookingsTriggerD <br>
